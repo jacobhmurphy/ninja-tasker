@@ -70,7 +70,7 @@
 \*\* Back-end
 
 - set up express server to accept incoming DELETE requests - DONE
-- use params place holder to identify the items to be deleted by index
+- use params place holder to identify the items to be deleted by index - ALMOST DONE?
 - remove item from LIST
 
 \*\* Front-end
