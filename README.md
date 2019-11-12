@@ -32,11 +32,11 @@
 
 \*\* Back-end
 
-- create an express server
-- create a GET route in express server
-- GET route should render the html page created from mock up
-- set up express with a view engine to render html files
-- add styles to the html page
+- create an express server - DONE
+- create a GET route in express server - DONE
+- GET route should render the html page created from mock up - DONE
+- set up express with a view engine to render html files - DONE
+- add styles to the html page - DONE
 - use a data structure LIST(array) to store to do items
 - add dummy data to LIST
 - pass the LIST to the html page created from mock up
