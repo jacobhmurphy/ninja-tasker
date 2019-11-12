@@ -6,7 +6,7 @@
 - create a wireframe - DONE
     - create a mockup / htmls / framework, e.g. Bootstrap
 - create html page of the mockup - DONE
-- style the html page
+- style the html page - DONE
     * using Figma to design the logo for the site
 
 
