@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride("_method"));
 
 app.get("/", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
@@ -15,7 +17,7 @@ app.post("/", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
 });
 
-app.delete("/", function() {
+app.delete("/:id", function() {
   console.log("Received a delete request.");
   // todoExample.splice(i, 1);
   res.render("home.ejs", { todo: todoExample });
