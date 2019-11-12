@@ -69,7 +69,7 @@
 
 \*\* Back-end
 
-- set up express server to accept incoming DELETE requests
+- set up express server to accept incoming DELETE requests - DONE
 - use params place holder to identify the items to be deleted by index
 - remove item from LIST
 

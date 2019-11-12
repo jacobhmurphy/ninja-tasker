@@ -15,6 +15,12 @@ app.post("/", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
 });
 
+app.delete("/", function() {
+  console.log("Received a delete request.");
+  // todoExample.splice(i, 1);
+  res.render("home.ejs", { todo: todoExample });
+});
+
 app.listen("3000", function() {
   console.log("Listening on port 3000...");
 });
