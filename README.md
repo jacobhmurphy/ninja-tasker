@@ -51,17 +51,17 @@
 
 \*\* Back-end
 
-- set up express server to accept incoming POST requests
-- look at incoming request
-- parse the incoming request
-- store the incoming task into the LIST storing to do items
-- pass the LIST to the html page created from mock up
+- set up express server to accept incoming POST requests - DONE
+- look at incoming request - DONE
+- parse the incoming request - DONE
+- store the incoming task into the LIST storing to do items - DONE
+- pass the LIST to the html page created from mock up - DONE
 
 \*\* Front-end
 
-- name input field in form holding the users input
-- set up form to POST items to express server
-- display each item in the LIST passed to the html page
+- name input field in form holding the users input - DONE
+- set up form to POST items to express server - DONE
+- display each item in the LIST passed to the html page - DONE
 
 * Removing to do items
 
