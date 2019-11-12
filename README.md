@@ -3,10 +3,11 @@
 * IDEA
 ----------------------
 ** Web Designer / UI Designer
-- create a wireframe 
-- create a mockup / htmls / framework
-- create html page of the mockup
+- create a wireframe - DONE
+    - create a mockup / htmls / framework, e.g. Bootstrap
+- create html page of the mockup - DONE
 - style the html page
+    * using Figma to design the logo for the site
 
 
 * Project Setup
