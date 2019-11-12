@@ -60,4 +60,14 @@ ul {
     cursor: pointer;
 }
 
-/* media query code goes here but I'm good */
+/* how to change styles for different screen sizes:
+
+@media only screen and (min-width: 900px) {
+    .user-button {
+        padding: 12px 20px;
+        margin-left: -90px;
+    }
+    ul {
+        width: 25%;
+    }
+} */
