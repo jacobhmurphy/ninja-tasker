@@ -37,13 +37,13 @@
 - GET route should render the html page created from mock up - DONE
 - set up express with a view engine to render html files - DONE
 - add styles to the html page - DONE
-- use a data structure LIST(array) to store to do items
-- add dummy data to LIST
-- pass the LIST to the html page created from mock up
+- use a data structure LIST(array) to store to do items - DONE
+- add dummy data to LIST - DONE
+- pass the LIST to the html page created from mock up - DONE
 
 \*\* Front-end
 
-- display each item in the LIST passed to the html page
+- display each item in the LIST passed to the html page - DONE
 
 * Adding to do items
 

@@ -22,15 +22,9 @@
         <input class="user-button" type="submit" value="Add" />
       </form>
       <ul>
-        <li class="ninja-item">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </li>
-        <li class="ninja-item">Cupiditate quo maiores beatae natus ipsam!</li>
-        <li class="ninja-item">
-          Doloribus reprehenderit sit ex placeat, eius nulla possimus, tenetur
-          modi error veritatis pariatur?
-        </li>
-        <li class="ninja-item">Eligendi, placeat ex!</li>
+        <% for (let i = 0; i < todo.length; i++) { %>
+        <li class="ninja-item"><%= todo[i]; %></li>
+        <% } %>
       </ul>
     </div>
   </body>
