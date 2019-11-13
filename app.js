@@ -7,6 +7,7 @@ app.set("view engine", "ejs");
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
@@ -17,10 +18,10 @@ app.post("/ninja", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
 });
 
-app.delete("/ninja/:id", function() {
-  console.log("Received a delete request.");
-  // todoExample.splice(i, 1);
-  res.render("home.ejs", { todo: todoExample });
+app.delete("/delete/:index", function(req, res) {
+  let index = req.params.index;
+  todoExample.splice(index, 1);
+  res.json(todoExample);
 });
 
 app.listen("3000", function() {
