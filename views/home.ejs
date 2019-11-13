@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Ninja Tasker</title>
-  </head>
-  <body>
-    <div id="container">
-      <h1><img src="ninja-logo.png" alt="" /> Ninja Tasker</h1>
-      <!-- <div id="logo"></div> -->
-      <form action="/" method="post">
-        <input
-          class="user-input"
-          type="text"
-          name="todoInputField"
-          id=""
-          required
-          placeholder="Add a task here..."
-        />
-        <input class="user-button" type="submit" value="Add" />
-      </form>
-      <ul>
-        <% for (let i = 0; i < todo.length; i++) { %>
-        <li class="ninja-item" id="<%= i %>"><%= todo[i]; %></li>
-        <% } %>
-      </ul>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="main.css" />
+  <title>Ninja Tasker</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1><img src="ninja-logo.png" alt="" /> Ninja Tasker</h1>
+    <!-- <div id="logo"></div> -->
+    <form action="/ninja" method="post">
+      <input class="user-input" type="text" name="todoInputField" id="" required placeholder="Add a task here..." />
+      <input class="user-button" type="submit" value="Add" />
+    </form>
+    <ul>
+      <% for (let i = 0; i < todo.length; i++) { %>
+      <li class="ninja-item" id="<%= i %>"><%= todo[i]; %></li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+
 </html>

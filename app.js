@@ -12,12 +12,12 @@ app.get("/", function(req, res) {
   res.render("home.ejs", { todo: todoExample });
 });
 
-app.post("/", function(req, res) {
+app.post("/ninja", function(req, res) {
   todoExample.push(req.body.todoInputField);
   res.render("home.ejs", { todo: todoExample });
 });
 
-app.delete("/:id", function() {
+app.delete("/ninja/:id", function() {
   console.log("Received a delete request.");
   // todoExample.splice(i, 1);
   res.render("home.ejs", { todo: todoExample });
