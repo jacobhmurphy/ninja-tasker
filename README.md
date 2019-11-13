@@ -70,9 +70,9 @@
 \*\* Back-end
 
 - set up express server to accept incoming DELETE requests - DONE
-- use params place holder to identify the items to be deleted by index - ALMOST DONE?
-- remove item from LIST
+- use params place holder to identify the items to be deleted by index - DONE
+- remove item from LIST - DONE
 
 \*\* Front-end
 
-- manipulate the DOM to send DELETE request to express server delete route when an item is clicked.
+- manipulate the DOM to send DELETE request to express server delete route when an item is clicked. - DONE
