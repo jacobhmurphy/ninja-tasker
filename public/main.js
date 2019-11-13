@@ -7,6 +7,7 @@ listItems.addEventListener("click", function(event) {
       res.json();
     })
     .then(function() {
+      window.location.href = "/";
       event.target.parentNode.removeChild(event.target);
     });
 });
