@@ -1,6 +1,4 @@
-// creating a model for our tasks
-
-// exporting model to our index
+const bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("Users", {
@@ -17,5 +15,24 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+
+  // comparing password to hash password
+
+  User.prototype.verifyPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+
+  // hook that happens on a specific scenario
+
+  // encrypting user password
+
+  User.addHook("beforeCreate", function(user) {
+    user.password = bcrypt.hashSync(
+      user.password,
+      bcrypt.genSaltSync(10),
+      null
+    );
+  });
+
   return User;
 };

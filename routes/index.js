@@ -1,6 +1,7 @@
 const express = require("express");
 const routes = express.Router();
 const db = require("../models/index.js");
+const passport = require("../config/passport");
 
 var todoExample = [
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
@@ -41,16 +42,28 @@ routes.get("/user/login", function(req, res) {
   res.render("login.ejs");
 });
 
-routes.post("/user/login", function(req, res) {
-  console.log("Hitting the post route for the login page");
-});
+routes.post(
+  "/user/login",
+  passport.authenticate("local", {
+    failureRedirect: "/user/login",
+    successRedirect: "/"
+  })
+  /* function(req, res) {
+    console.log("Hitting the post route for the login page");
+    res.redirect("/");
+  } */
+);
 
 routes.get("/user/registration", function(req, res) {
   res.render("registration.ejs");
 });
 
-routes.post("/user/registration", function(req, res) {
-  console.log("Hitting the post route for the registration page");
-});
+routes.post(
+  "/user/registration",
+  passport.authenticate("local-signup", {
+    successRedirect: "/",
+    failureRedirect: "/user/registration"
+  })
+);
 
 module.exports = routes;
