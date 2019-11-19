@@ -9,9 +9,11 @@ var todoExample = [
   "Eligendi, placeat ex!"
 ];
 
+// routing for tasks
+
 routes.get("/", function(req, res) {
   db.Tasks.findAll({ attributes: ["id", "taskItem"] }).then(function(results) {
-    console.log(results);
+    // console.log(results);
     res.render("home.ejs", { todo: results });
   });
 });
@@ -31,6 +33,24 @@ routes.delete("/delete/:index", function(req, res) {
   db.Tasks.destroy({ where: { id: req.params.index } }).then(function(results) {
     res.json(results);
   });
+});
+
+// routing for user: GET and POST for login, GET and POST for signup
+
+routes.get("/user/login", function(req, res) {
+  res.render("login.ejs");
+});
+
+routes.post("/user/login", function(req, res) {
+  console.log("Hitting the post route for the login page");
+});
+
+routes.get("/user/registration", function(req, res) {
+  res.render("registration.ejs");
+});
+
+routes.post("/user/registration", function(req, res) {
+  console.log("Hitting the post route for the registration page");
 });
 
 module.exports = routes;
