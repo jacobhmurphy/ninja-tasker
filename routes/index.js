@@ -14,10 +14,10 @@ var todoExample = [
 // routing for tasks
 
 routes.get("/", authenticate, function(req, res) {
-  console.log(req.user);
+  // console.log(req.user);
   db.Tasks.findAll({ attributes: ["id", "taskItem"] }).then(function(results) {
     // console.log(results);
-    res.render("home.ejs", { todo: results });
+    res.render("home.ejs", { todo: results, user: req.user });
   });
 });
 
@@ -71,7 +71,7 @@ routes.post(
 // profile page
 
 routes.get("/user/profile", authenticate, function(req, res) {
-  res.render("profile.ejs");
+  res.render("profile.ejs", { user: req.user });
 });
 
 routes.get("/user/logout", function(req, res) {
