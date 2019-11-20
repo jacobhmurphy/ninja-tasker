@@ -2,6 +2,7 @@ const express = require("express");
 const routes = express.Router();
 const db = require("../models/index.js");
 const passport = require("../config/passport");
+const authenticate = require("../config/middleware/isAuthenticated");
 
 var todoExample = [
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
@@ -12,7 +13,8 @@ var todoExample = [
 
 // routing for tasks
 
-routes.get("/", function(req, res) {
+routes.get("/", authenticate, function(req, res) {
+  console.log(req.user);
   db.Tasks.findAll({ attributes: ["id", "taskItem"] }).then(function(results) {
     // console.log(results);
     res.render("home.ejs", { todo: results });
@@ -65,5 +67,17 @@ routes.post(
     failureRedirect: "/user/registration"
   })
 );
+
+// profile page
+
+routes.get("/user/profile", authenticate, function(req, res) {
+  res.render("profile.ejs");
+});
+
+routes.get("/user/logout", function(req, res) {
+  console.log("hitting the logout route");
+  req.logout();
+  res.redirect("/");
+});
 
 module.exports = routes;

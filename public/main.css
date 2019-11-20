@@ -1,12 +1,12 @@
 body {
-    background-color: lightcyan;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: lightcyan;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #container {
-    width: 75%;
-    margin: 0 auto;
-    padding: 20px 0px 50px 0px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 0px 50px 0px;
 }
 
 /* #logo {
@@ -14,50 +14,50 @@ body {
 } */
 
 .user-input {
-    text-align: left;
-    width: 80%;
-    padding: 10px 15px;
-    font-size: 20px;
-    font-weight: 300;
-    border: 0;
-    outline: none;
-    border-top: 1px solid white;
-    /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  text-align: left;
+  width: 80%;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 300;
+  border: 0;
+  outline: none;
+  border-top: 1px solid white;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
 .user-input:focus {
-    border-bottom: 2px solid #515151;
+  border-bottom: 2px solid #515151;
 }
 
 .user-button {
-    text-align: center;
-    padding: 3px 18px;
-    font-size: 20px;
-    font-weight: 300;
-    outline: none;
-    margin-left: -85px;
+  text-align: center;
+  padding: 3px 18px;
+  font-size: 20px;
+  font-weight: 300;
+  outline: none;
+  margin-left: -85px;
 }
 
 .user-button:hover {
-    border: 2px solid #515151;
+  border: 2px solid #515151;
 }
 
 ul {
-    width: 80%;
-    padding: 0;
-    list-style: none;
+  width: 80%;
+  padding: 0;
+  list-style: none;
 }
 
 .ninja-item {
-    width: 100%;
-    padding: 5px 10px;
-    font-size: 25px;
-    border-bottom: 1px solid black;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 25px;
+  border-bottom: 1px solid black;
 }
 
 .ninja-item:hover {
-    text-decoration: line-through;
-    cursor: pointer;
+  text-decoration: line-through;
+  cursor: pointer;
 }
 
 /* how to change styles for different screen sizes:
@@ -71,3 +71,8 @@ ul {
         width: 25%;
     }
 } */
+
+#profile {
+  float: right;
+  margin-right: 10px;
+}
