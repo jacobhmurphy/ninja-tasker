@@ -15,7 +15,7 @@ var todoExample = [
 
 routes.get("/", authenticate, function(req, res) {
   // console.log(req.user);
-  db.Tasks.findAll({ attributes: ["id", "taskItem"] }).then(function(results) {
+  db.Tasks.findAll({ where: { userID: req.user.id } }).then(function(results) {
     // console.log(results);
     res.render("home.ejs", { todo: results, user: req.user });
   });
@@ -23,9 +23,10 @@ routes.get("/", authenticate, function(req, res) {
 
 routes.post("/ninja", function(req, res) {
   todoExample.push(req.body.todoInputField);
-  db.Tasks.create({ taskItem: req.body.todoInputField }).then(function(
-    results
-  ) {
+  db.Tasks.create({
+    taskItem: req.body.todoInputField,
+    userID: req.user.id
+  }).then(function(results) {
     res.redirect("/");
   });
 });

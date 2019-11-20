@@ -32,9 +32,12 @@ passport.use(
         if (dbUser) {
           return done(null, false, { message: "Email already in use" });
         } else {
-          db.Users.create({ email: email, password: password }).then(function(
-            newUser
-          ) {
+          db.Users.create({
+            email: email,
+            password: password,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName
+          }).then(function(newUser) {
             if (!newUser) {
               return done(null, false);
             }
